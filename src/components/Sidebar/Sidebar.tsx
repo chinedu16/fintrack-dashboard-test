@@ -31,7 +31,7 @@ export default function Sidebar({ isOpen, onNavigate }: SidebarProps) {
               href={href}
               className="group"
               onClick={() => {
-                if (window.innerWidth < 640) onNavigate(); // only close on mobile
+                if (window.innerWidth < 640) onNavigate();
               }}
             >
               <div

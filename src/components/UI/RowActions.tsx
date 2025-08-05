@@ -1,4 +1,3 @@
-// app/components/RowActions.tsx
 "use client";
 
 import ActionDropdown from "./ActionDropdown";

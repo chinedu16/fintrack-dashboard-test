@@ -11,10 +11,10 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   useEffect(() => {
     const isMobile = window.innerWidth < 640;
     setIsSidebarOpen(!isMobile);
-    setHasMounted(true); // Only render layout after mounting
+    setHasMounted(true);
   }, []);
 
-  if (!hasMounted) return null; // Prevents layout flash
+  if (!hasMounted) return null;
 
   return (
     <div className="h-screen grid grid-rows-[auto_1fr]">

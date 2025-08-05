@@ -11,7 +11,6 @@ export default function Tabs({ tabs, initialActiveKey }: TabsProps) {
 
   return (
     <div className="w-full">
-      {/* Tab Bar */}
       <div className="flex border-b border-gray-200">
         {tabs.map((tab) => (
           <button
@@ -29,9 +28,8 @@ export default function Tabs({ tabs, initialActiveKey }: TabsProps) {
         ))}
       </div>
 
-      {/* Tab Content with transition */}
       <div
-        key={active} // 🔑 Ensures animation runs on tab change
+        key={active}
         className="mt-7 transition-all duration-300 ease-in-out opacity-0 animate-fade-in"
       >
         {activeTab?.content}

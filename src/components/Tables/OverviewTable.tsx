@@ -121,7 +121,6 @@ const SortableTable = () => {
   return (
     <div className="overflow-x-auto w-full">
       <div className="min-w-[600px]">
-        {/* Header */}
         <div className="grid grid-cols-5 sm:grid-cols-[50%_12%_12%_10%_10%] gap-4 font-semibold text-sm">
           {headers.map((header) => (
             <div
@@ -143,7 +142,6 @@ const SortableTable = () => {
           ))}
         </div>
 
-        {/* Rows */}
         <div>
           {sortedData.map((item) => (
             <div

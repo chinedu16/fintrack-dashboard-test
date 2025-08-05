@@ -9,13 +9,13 @@ export default function HeaderBar({
   return (
     <header className="flex items-center justify-between px-4 sm:px-12 py-4 border-b bg-white">
       <div className="flex items-center gap-4">
-        {/* Toggle button */}
+      
         <button
           onClick={onToggleSidebar}
           className="p-2 rounded-md hover:bg-gray-100 focus:outline-none"
           aria-label="Toggle sidebar"
         >
-          {/* Hamburger or collapse icon */}
+         
           {isSidebarOpen ? (
             <svg
               className="w-6 h-6 text-gray-700"

@@ -10,7 +10,6 @@ export default function ActionDropdown({ actions }: ActionDropdownProps) {
   const [visible, setVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (ref.current && !ref.current.contains(event.target as Node)) {
@@ -22,19 +21,18 @@ export default function ActionDropdown({ actions }: ActionDropdownProps) {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Handle show/hide with delay
   const toggleDropdown = () => {
     if (open) {
       closeDropdown();
     } else {
       setOpen(true);
-      setTimeout(() => setVisible(true), 10); // allow mounting before animating
+      setTimeout(() => setVisible(true), 10);
     }
   };
 
   const closeDropdown = () => {
     setVisible(false);
-    setTimeout(() => setOpen(false), 200); // match fade-out duration
+    setTimeout(() => setOpen(false), 200);
   };
 
   return (
@@ -42,7 +40,6 @@ export default function ActionDropdown({ actions }: ActionDropdownProps) {
       className="relative text-left flex justify-center items-center"
       ref={ref}
     >
-      {/* Trigger button */}
       <button
         onClick={toggleDropdown}
         className="rounded cursor-pointer hover:bg-gray-100 focus:outline-none"
@@ -55,7 +52,6 @@ export default function ActionDropdown({ actions }: ActionDropdownProps) {
         />
       </button>
 
-      {/* Dropdown menu */}
       {open && (
         <div
           className={clsx(
